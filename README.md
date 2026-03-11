@@ -469,3 +469,12 @@ kustomize build | kubectl apply -f -
 ## License
 
 [License](LICENSE.md)
+
+## Deployment
+
+frontend - http://ab47dba31068c47508ce22a76cd1fe02-819646302.us-east-1.elb.amazonaws.com/
+backend - http://acd6c8f32970742c1bafa366e3f3bcbe-728629216.us-east-1.elb.amazonaws.com/movies
+
+screenshots of pipline running - https://github.com/rajcspsg/udacity-build-cicd-project/tree/main/submission
+
+
