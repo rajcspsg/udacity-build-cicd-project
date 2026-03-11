@@ -98,8 +98,8 @@ jobs:
         id: get-backend-url
         run: |
           aws eks update-kubeconfig --name ${{ env.EKS_CLUSTER_NAME }} --region ${{ env.AWS_REGION }}
-          BACKEND_URL=$(kubectl get svc backend -o jsonpath='{.status.loadBalancer.ingress[0].hostname}')
-          echo "backend_url=http://${BACKEND_URL}:5000" >> $GITHUB_OUTPUT
+          BACKEND_HOST=$(kubectl get svc backend -o jsonpath='{.status.loadBalancer.ingress[0].hostname}')
+          echo "backend_url=http://${BACKEND_HOST}" >> $GITHUB_OUTPUT
 
       - name: Build Docker image
         env:
